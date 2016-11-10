@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        <script src="model.js"></script>
+        <script src="control.js"></script>
+        <script src="view.js"></script>
+    </head>
+    <body>
+        <h1>Warehouse Manager</h1>
+        <table id="myTable" border="1px solid black">
+            <tr id="row1"></tr>
+            <tr id="row2"></tr>
+        </table>
+        <hr>
+        <form id="myForm">
+            <input type="text" name="itemValue" placeholder="item">
+            <input type="text" name="quantityValue" placeholder="quantity">
+            <input type="number" name="limitValue" placeholder="limit">
+        </form>
+        <p></p>
+        <button onclick="insert()">Add</button>
+    </body>
+</html>

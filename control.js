@@ -4,10 +4,17 @@ var totalQuantity = 0
 // this functions updates the total quantity value and
 // checks whether it exceeds the limit stated
 // by the user or not
-function checkQuantity(quantity, limit){
+function checkQuantity(quantity, limit, isAdding){
     
-    // update the total quantity value
-    totalQuantity = parseInt(totalQuantity) + parseInt(quantity);
+    console.log("Limit = ", limit);
+    
+    // if the user is adding items, update the total quantity
+    if(isAdding){
+        // update the total quantity value
+        totalQuantity = parseInt(totalQuantity) + parseInt(quantity);
+    }
+    
+    console.log("total quantity = ", totalQuantity);
     
     // if the limit is exceeded, notice the user with an alert
     if(parseInt(totalQuantity) > parseInt(limit)){

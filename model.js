@@ -68,7 +68,7 @@ function insert(){
     }
     
     // check if the limit stated by the user was exceeded
-    checkQuantity(quantity, limit);
+    checkQuantity(quantity, limit, true);
     
     // hide the form
     hide();
@@ -78,8 +78,12 @@ function insert(){
 function setLimit(){
     
     // retrieve the value inserted by the user in the form
-     var form = document.getElementById("limitForm");
-     limit = parseInt(form.elements[0].value);
+    var form = document.getElementById("limitForm");
+    limit = parseInt(form.elements[0].value);
+    
+    // check the quantity with the new limit
+    checkQuantity(quantity, limit, false);
+    
 }
 
 // this function returns the index of the object given as parameter, -1 if not found

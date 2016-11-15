@@ -4,11 +4,7 @@ var totalQuantity = 0
 // this functions updates the total quantity value and
 // checks whether it exceeds the limit stated
 // by the user or not
-function checkQuantity(quantity){
-    
-    // retrieve the limit stated by the user
-    var form = document.getElementById("myForm");
-    var limit = parseInt(form.elements[2].value);
+function checkQuantity(quantity, limit){
     
     // update the total quantity value
     totalQuantity = parseInt(totalQuantity) + parseInt(quantity);

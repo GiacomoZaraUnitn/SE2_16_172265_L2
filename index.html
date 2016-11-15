@@ -5,6 +5,7 @@
         <script src="model.js"></script>
         <script src="control.js"></script>
         <script src="view.js"></script>
+        <link href="index.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <h1>Warehouse Manager</h1>
@@ -13,12 +14,20 @@
             <tr id="row2"></tr>
         </table>
         <hr>
+        <button onclick="show()">Order items</button>
+        <hr>
         <form id="myForm">
             <input type="text" name="itemValue" placeholder="item">
             <input type="text" name="quantityValue" placeholder="quantity">
-            <input type="number" name="limitValue" placeholder="limit">
+        </form>
+        <button onclick="insert()" id="addButton">Add</button>
+        <hr>
+        <form id="limitForm">
+            <input type="number" name="limitValue" placeholder="limit" value="30">
         </form>
         <p></p>
-        <button onclick="insert()">Add</button>
+        <button onclick="setLimit()" id="setLimitButton">Set Limit</button>
+        <p></p>
+        
     </body>
 </html>

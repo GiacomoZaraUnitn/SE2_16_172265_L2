@@ -9,6 +9,29 @@ var items = []
 // array for the quantities for each object
 var quantities = []
 
+// limit value (default = 30)
+var limit = 30;
+
+// this function sets the insertion form as visible
+function show(){
+    var form = document.getElementById("myForm");
+    var btn = document.getElementById("addButton");
+    form.style.visibility = "visible";
+    btn.style.visibility = "visible";
+    
+}
+
+// this function sets the insertion form as hidden and resets its values
+function hide(){
+    var form = document.getElementById("myForm");
+    var btn = document.getElementById("addButton"); 
+    form.style.visibility = "hidden";
+    btn.style.visibility = "hidden";
+    form.elements[0].value = "";
+    form.elements[1].value = "";
+    
+}
+
 // this function inserts the new values in the arrays
 function insert(){
     
@@ -19,6 +42,8 @@ function insert(){
     
     // if the item is already stored...
     if(alreadyIn(item, items)){
+        
+        console.log("Is already in")
         
         // update the array
         quantities[findIndex(item)] = quantities[findIndex(item)] + 1;
@@ -43,7 +68,18 @@ function insert(){
     }
     
     // check if the limit stated by the user was exceeded
-    checkQuantity(quantity);    
+    checkQuantity(quantity, limit);
+    
+    // hide the form
+    hide();
+}
+
+// this function sets the limit once the user presses the button
+function setLimit(){
+    
+    // retrieve the value inserted by the user in the form
+     var form = document.getElementById("limitForm");
+     limit = parseInt(form.elements[0].value);
 }
 
 // this function returns the index of the object given as parameter, -1 if not found

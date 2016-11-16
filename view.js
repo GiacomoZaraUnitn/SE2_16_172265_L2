@@ -11,6 +11,9 @@ var cells2 = []
 // an up-to-date table 
 function updateTable(item, quantity, index, trigger) {
     
+    var table = document.getElementById("myTable");
+    table.style.visibility = "visible";
+    
     // trigger is a boolean variable which indicates whether the object that is to be inserted
     // is already stored or not
     

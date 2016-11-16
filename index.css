@@ -5,3 +5,7 @@
 #addButton {
     visibility: hidden;
 }
+
+#myTable {
+    visibility: hidden;
+}
